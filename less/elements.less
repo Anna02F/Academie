@@ -1,0 +1,42 @@
+//Main Vars
+@base-url:     "../images";
+@border-color: #e5e5e5;
+@border-news-color: #b1b1b1;
+@item-bg: #bd6445;
+@icon-color: #81b385;
+@brand-primary: @brand-success);
+//Mixins
+.font(@fontName,@fontFile) {
+    @font-face	{
+        font-family: "@{fontName}";
+        src: url("../fonts/@{fontFile}/@{fontName}.eot");
+        src: url("../fonts/@{fontFile}/@{fontName}.eot?#iefix") format("embedded-opentype"),
+            url("../fonts/@{fontFile}/@{fontName}.woff") format("woff"),
+            url("../fonts/@{fontFile}/@{fontName}.ttf") format("truetype"),
+            url("../fonts/@{fontFile}/@{fontName}.svg#svgFontName") format("svg");
+    }
+}
+::selection {
+    background: @brand-success;
+}
+::-moz-selection {
+    background: @brand-success;
+}
+button, a{
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+button,label{
+    cursor: pointer;
+    outline: none;
+}
+textarea{
+    resize: none;
+    overflow: auto;
+}
+.inlinePos(@display,@vertAlign){
+    display:@display;
+    vertical-align:@vertAlign;
+}
